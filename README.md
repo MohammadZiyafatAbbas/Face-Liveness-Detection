@@ -14,22 +14,17 @@ A real-time face liveness detection system using OpenCV and dlib.
    cd face-liveness-detection
 Create a virtual environment (Recommended)
 
-sh
-Copy
-Edit
+```sh
 python -m venv venv
 source venv/bin/activate  # On Mac/Linux
 venv\Scripts\activate  # On Windows
 Install dependencies
 
-sh
-Copy
-Edit
+```sh
 pip install -r requirements.txt
+
 Running the Application
-sh
-Copy
-Edit
+```sh
 python app.py
 This will start a local Flask server. Open your browser and go to http://127.0.0.1:5000/.
 
