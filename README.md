@@ -11,7 +11,7 @@ A real-time face liveness detection system using OpenCV and dlib.
 1. **Clone the repository**  
    ```sh
    git clone https://github.com/MohammadZiyafatAbbas/Face-Liveness-Detection.git
-   cd face-liveness-detection
+   cd Face-Liveness-Detection
    ```
 
 2. **Create a virtual environment (Recommended)**  
