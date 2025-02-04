@@ -47,35 +47,32 @@ pip install cmake
 pip install dlib
 ```
 If this fails, download and install **Visual Studio Build Tools** from:  
-🔗 [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+   - Download from [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+   - During installation, select:
+     - **C++ CMake tools for Windows**
+     - **MSVC v142 - VS 2019 C++ x64/x86 build tools**
+     - **Windows 10 SDK**
+     - **C++/CLI support for v142 build tools**
+     - **C++ Modules for v142 build tools**
 
-Then retry:  
+2. **Reinstall `dlib` and `cmake` using pip:**
 ```sh
-pip install dlib
+pip install cmake dlib
 ```
 
-#### **Linux Users:**  
+### Fixing OpenCV Camera Issues
+If OpenCV cannot access your webcam, try:
 ```sh
-sudo apt-get update
-sudo apt-get install cmake
-pip install dlib
+pip uninstall opencv-python opencv-contrib-python
+pip install opencv-python opencv-contrib-python
 ```
 
-### 2️⃣ **OpenCV Not Found Error**  
-If `cv2` is not recognized:  
+### Fixing Flask Debugger Errors
+If Flask debugger throws exceptions related to streamed responses, restart Flask with:
 ```sh
-pip install opencv-python
+set FLASK_ENV=development  # Windows
+export FLASK_ENV=development  # macOS/Linux
+python app.py
 ```
 
-### 3️⃣ **shape_predictor_68_face_landmarks.dat Not Found**  
-This file is required for facial landmark detection.  
-🔗 Download it from: [http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)  
-Extract it and place it in the project directory.
-
----
-
-## Contributors  
-- **Your Name** - [GitHub Profile](https://github.com/your-username)  
-
----
 
