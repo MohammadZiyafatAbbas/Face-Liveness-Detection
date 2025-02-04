@@ -10,7 +10,7 @@ A real-time face liveness detection system using OpenCV and dlib.
 
 1. **Clone the repository**  
    ```sh
-   git clone https://github.com/your-username/face-liveness-detection.git
+   git clone https://github.com/MohammadZiyafatAbbas/Face-Liveness-Detection.git
    cd face-liveness-detection
    ```
 
@@ -55,7 +55,7 @@ If this fails, download and install **Visual Studio Build Tools** from:
      - **C++/CLI support for v142 build tools**
      - **C++ Modules for v142 build tools**
 
-2. **Reinstall `dlib` and `cmake` using pip:**
+**Reinstall `dlib` and `cmake` using pip:**
 ```sh
 pip install cmake dlib
 ```
