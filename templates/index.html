@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Liveness Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Face Liveness Detection</h1>
+    <div class="instructions">
+        <p>Follow these steps to verify your liveness:</p>
+        <ol>
+            <li>Look directly at the camera.</li>
+            <li>Blink your eyes.</li>
+            <li>Move your head left or right.</li>
+            <li>Smile or open your mouth.</li>
+        </ol>
+    </div>
+    <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+    <div class="controls">
+        <button id="start-btn">Start</button>
+        <button id="stop-btn">Stop</button>
+    </div>
+    <div class="results">
+        <h2>Results:</h2>
+        <p id="result-text">Waiting for verification...</p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
