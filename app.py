@@ -30,16 +30,36 @@ def stop():
 
 def generate_frames():
     camera = cv2.VideoCapture(0)
+    
+    # Check if camera opened successfully
+    if not camera.isOpened():
+        print("Error: Could not open camera.")
+        return
+    
     while is_running:
-        success, frame = camera.read()
-        if not success:
-            break
-        else:
+        try:
+            success, frame = camera.read()
+            
+            if not success or frame is None:
+                print("Failed to capture frame")
+                break
+            
             frame, result = detector.detect(frame)
+            
             ret, buffer = cv2.imencode('.jpg', frame)
+            
+            if not ret:
+                print("Failed to encode frame")
+                break
+            
             frame = buffer.tobytes()
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+        
+        except Exception as e:
+            print(f"Error in frame generation: {e}")
+            break
+    
     camera.release()
 
 if __name__ == '__main__':

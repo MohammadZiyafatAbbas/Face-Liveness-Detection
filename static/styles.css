@@ -1,20 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
     margin: 0;
     padding: 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
     margin-top: 20px;
-    color: #333;
+    font-size: 26px;
 }
 
 .instructions {
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 500px;
     text-align: left;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .video-container {
@@ -24,10 +37,11 @@ h1 {
 }
 
 img {
-    border: 2px solid #333;
-    border-radius: 10px;
+    border: 3px solid #fff;
+    border-radius: 15px;
     max-width: 100%;
     height: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .controls {
@@ -35,17 +49,30 @@ img {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
-    margin: 0 10px;
+    margin: 10px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #4ca1af;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2c3e50;
 }
 
 .results {
     margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 #result-text {
     font-size: 18px;
-    color: #333;
+    font-weight: bold;
 }
